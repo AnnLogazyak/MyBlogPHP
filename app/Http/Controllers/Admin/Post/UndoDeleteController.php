@@ -15,9 +15,9 @@ class UndoDeleteController extends Controller
         if ($lastDeletedPost) {
             // Восстанавливаем категорию
             $lastDeletedPost->restore();
-            return redirect()->route('admin.post.index')->with('success', 'Удаленная категория успешно восстановлена');
+            return redirect()->route('admin.post.index')->with('success', 'Удаленный пост восстановлена');
         }
 
-        return redirect()->route('admin.post.index')->with('error', 'Нет удаленных категорий');
+        return redirect()->route('admin.post.index')->with('error', 'Нет удаленных постов');
     }
 }
