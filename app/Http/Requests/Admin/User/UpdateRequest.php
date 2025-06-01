@@ -24,7 +24,8 @@ class UpdateRequest extends FormRequest
         return [
             'name' => 'required|string|max:255|unique:users,name,' . $this->user->id,
             'email' => 'required|string|email|max:255|unique:users,email,' . $this->user->id,
-            'password' => 'nullable|string|confirmed'
+            'password' => 'nullable|string|confirmed',
+            'role_id' => 'required|integer'
         ];
     }
 

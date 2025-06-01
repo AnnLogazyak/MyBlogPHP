@@ -24,7 +24,8 @@ class StoreRequest extends FormRequest
         return [
             'name' => 'required|string|max:255|unique:users,name',
             'email' => 'required|string|email|max:255|unique:users,email',
-            'password' => 'required|string|confirmed'
+            'password' => 'required|string|confirmed',
+            'role_id' => 'required|integer'
         ];
     }
 
@@ -37,7 +38,7 @@ class StoreRequest extends FormRequest
             'email.email' => 'Формат не соответствует email',
             'email.unique' => 'Адрес не является уникальным',
             'password.required' => 'Это поле необходимо заполнить',
-            'password.confirmed' => 'Пароль не совпадает'
+            'password.confirmed' => 'Пароль не совпадает',
         ];
     }
 }

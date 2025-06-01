@@ -17,6 +17,7 @@ class UpdateController extends Controller
         $updateData = [
             'name' => $data['name'],
             'email' => $data['email'],
+            'role_id' => (int) $data['role_id'],
         ];
 
         // Добавляем пароль только если он заполнен

@@ -52,9 +52,6 @@
                                         <input type="file" class="custom-file-input" name="preview_img">
                                         <label class="custom-file-label">Выберите изображение</label>
                                     </div>
-                                    {{--                                <div class="input-group-append">--}}
-                                    {{--                                    <span class="input-group-text">Загрузить</span>--}}
-                                    {{--                                </div>--}}
                                 </div>
                                 @error('preview_img')
                                 <div class="text-danger">
@@ -69,9 +66,6 @@
                                         <input type="file" class="custom-file-input" name="main_img">
                                         <label class="custom-file-label">Выберите изображение</label>
                                     </div>
-                                    {{--                                <div class="input-group-append">--}}
-                                    {{--                                    <span class="input-group-text">Загрузить</span>--}}
-                                    {{--                                </div>--}}
                                 </div>
                                 @error('main_img')
                                 <div class="text-danger">
