@@ -16,9 +16,14 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if ((int) auth()->user()->role_id != User::ROLE_ADMIN)
-        {
-            abort(403);
+        // Если пользователь не авторизован, перенаправляем на страницу логина
+        if (!auth()->check()) {
+            return redirect('/login');
+        }
+
+        // Если пользователь не админ, перенаправляем на главную страницу
+        if ((int) auth()->user()->role_id !== User::ROLE_ADMIN) {
+            return redirect('/');
         }
 
         return $next($request);
