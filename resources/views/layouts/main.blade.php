@@ -54,10 +54,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Download</a>
                     </li>
-                    <li class="nav-item">
-                        <form action="{{ route('logout') }}" method="POST">
+                    <li class="nav-item d-flex align-items-center">
+                        <span class="nav-link">Привет, {{ Auth::user()->name }}!</span>
+                        <form action="{{ route('logout') }}" method="POST" class="ml-2">
                             @csrf
-                            <button class='btn btn-outline-primary' type="submit">Выйти</button>
+                            <button class="btn btn-outline-primary" type="submit">Выйти</button>
                         </form>
                     </li>
                 </ul>
