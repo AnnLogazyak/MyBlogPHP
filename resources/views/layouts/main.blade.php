@@ -22,7 +22,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="edicaMainNav">
-                <ul class="navbar-nav ">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item pt-1">
+                        <a class="nav-link" href="{{ route('main.index') }}">Блог</a>
+                    </li>
                     <li class="nav-item d-flex align-items-center">
                         <span class="nav-link">Привет, {{ Auth::user()->name }}!</span>
                         <form action="{{ route('logout') }}" method="POST" class="ml-2">
